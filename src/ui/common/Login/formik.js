@@ -1,4 +1,8 @@
 import './formik.scss';
+// TODO don`t use common or reserved names in component name
+// Formik is incorrect name
+// Input - better name
+// use simple syntax -> const Input = ({ formik, name, type }) => (<div>...</div>)
 const Formik = ({ formik, name, type }) => {
    return (
       <div className="input">
