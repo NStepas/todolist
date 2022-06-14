@@ -1,16 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
-import Auth from './pages/AuthPage';
-import HomePage from './pages/HomePage';
-import TasksPage from './pages/TasksPage';
 
-const AppRoutes = () => {
-   return (
-      <Routes>
-         <Route path="/" element={<HomePage />} />
-         <Route path="/todolist" element={<TasksPage />} />
-         <Route path="/auth" element={<Auth />} />
-      </Routes>
-   );
-};
+import Login from '../pages/Login/Login';
+
+const AppRoutes = () => (
+   <Routes>
+      <Route path="/" element={<></>} />
+      <Route path="/todolist" element={<></>} />
+      <Route path="/auth" element={<Login />} />
+   </Routes>
+);
 
 export default AppRoutes;

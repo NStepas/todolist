@@ -1,8 +1,7 @@
-// TODO re-arrange imports
+import thunk from 'redux-thunk';
 import { configureStore } from '@reduxjs/toolkit';
 
 import auth from './auth/auth';
-import thunk from 'redux-thunk';
 
 const store = configureStore({
    reducer: { auth: auth },
