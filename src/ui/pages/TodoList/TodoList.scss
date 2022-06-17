@@ -1,0 +1,32 @@
+@import '../../../ui/assets/styles/colors.scss';
+
+.todoList-page {
+   background-color: $background-color;
+   width: 100%;
+   height: 100vh;
+   .header {
+      background-color: $color-active-2;
+      width: 100%;
+      height: 7vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: $color-white;
+
+      img {
+         height: 4vh;
+         margin: 0 1vh 0 2vh;
+      }
+   }
+   .todoList-container {
+      display: flex;
+      flex-direction: row;
+      .todoList-menu {
+         width: 20vh;
+         height: 93vh;
+         background-color: $color-active;
+      }
+      .todoList-tasks {
+      }
+   }
+}

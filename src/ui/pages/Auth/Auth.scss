@@ -1,20 +1,19 @@
 @media screen and (max-width: 770px) {
-   .loginForm {
+   .AuthForm {
       width: 100% !important;
       height: 100% !important;
       box-shadow: none !important;
    }
 }
 @media screen and (max-width: 1220px) {
-   .loginForm {
+   .AuthForm {
       width: 50% !important;
    }
 }
 
-.loginForm {
+.AuthForm {
    width: 30%;
-   height: 40vh;
-
+   height: auto;
    position: absolute;
    top: 50%;
    left: 50%;

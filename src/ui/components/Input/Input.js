@@ -1,6 +1,6 @@
 import './Input.scss';
 
-const Input = ({ formik, name, type }) => (
+const Input = ({ formik, name, type, text }) => (
    <div className="input">
       <input
          id={name}

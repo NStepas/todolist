@@ -8,3 +8,11 @@ export const ThunkLoginUser = createAsyncThunk('auth/login', async payload => {
    }
    return false;
 });
+
+export const ThunkSignUpUser = createAsyncThunk('auth/signUp', async payload =>
+   api.auth.signUp(payload)
+);
+
+export const ThunkGetUserTasks = createAsyncThunk('task/getUserTasks', async payload =>
+   api.auth.getUserTasks(payload)
+);

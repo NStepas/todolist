@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { formTexts } from '../../../constants/formTexts';
+import { formTexts } from '../../../../constants/formTexts';
 
 const { isRequired, passwordMinMessage, passwordMaxMessage, emailMessage } = formTexts;
 const initialValues = {

@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { act } from 'react-dom/test-utils';
 import ActionSetAuthState from '../auth/actions/setAuthState';
-import { ThunkLoginUser } from './thunk/thunk';
+import { ThunkGetUserTasks, ThunkLoginUser, ThunkSignUpUser } from './thunk/thunk';
 
 const initialAuthState = {
    token: '',
@@ -8,11 +9,10 @@ const initialAuthState = {
 };
 
 const auth = createSlice({
-   name: 'authentication',
+   name: 'auth',
    initialState: initialAuthState,
    reducers: {
-      login(state, action) {
-         localStorage.setItem('token', initialAuthState.token);
+      setAuthState: (state, action) => {
          ActionSetAuthState(state, action.payload);
       },
       logout(state, action) {
@@ -21,9 +21,15 @@ const auth = createSlice({
       },
    },
    extraReducers: builder => {
-      builder.addCase(ThunkLoginUser.fulfilled, (state, action) => {
-         ActionSetAuthState(state, action.payload);
-      });
+      builder
+         .addCase(ThunkLoginUser.fulfilled, (state, action) => {
+            console.log(state, action);
+            ActionSetAuthState(state, action.payload);
+         })
+         .addCase(ThunkSignUpUser.fulfilled, (state, action) => {
+            ActionSetAuthState(state, action.payload);
+         })
+         .addCase(ThunkGetUserTasks.fulfilled, (state, action) => {});
    },
 });
 
